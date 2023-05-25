@@ -1,9 +1,9 @@
 type AddTodoTitleProps = {
-  title: () => void;
-  isComplete: () => void;
-  isEditing: () => void;
-  editedTodoTitle: () => void;
-  setEditedTodoTitle: () => void;
+  title: string;
+  isComplete: boolean;
+  isEditing: boolean;
+  editedTodoTitle: string;
+  setEditedTodoTitle: (newTodoTitle: string) => void;
 }
 
 
@@ -11,7 +11,7 @@ export function TodoTitle(props: AddTodoTitleProps) {
   const { isEditing, isComplete, title, editedTodoTitle, setEditedTodoTitle } =
     props;
 
-  function onTodoTitleChange(e) {
+  function onTodoTitleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newTodoTitle = e.target.value;
     setEditedTodoTitle(newTodoTitle);
   }
