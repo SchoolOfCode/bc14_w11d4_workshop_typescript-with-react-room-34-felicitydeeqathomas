@@ -2,6 +2,8 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { Todo } from "./Todo/Todo";
 import { AddTodo } from "./AddTodo";
+import { TodoObject } from "./Todo/Todo";
+
 
 const initialTodos = [
   { id: nanoid(), title: "Make some 🔥 noodles", isComplete: false },
@@ -12,7 +14,7 @@ const initialTodos = [
 export function TodoList() {
   const [todos, setTodos] = useState(initialTodos);
 
-  function addTodo(newTodoTitle) {
+  function addTodo(newTodoTitle: string) {
     const newTodo = {
       id: nanoid(),
       title: newTodoTitle,
@@ -21,7 +23,7 @@ export function TodoList() {
     setTodos([...todos, newTodo]);
   }
 
-  function updateTodo(id, updatedTodo) {
+  function updateTodo(id: string, updatedTodo: TodoObject) {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         return {
@@ -34,7 +36,7 @@ export function TodoList() {
     setTodos(newTodos);
   }
 
-  function deleteTodo(id) {
+  function deleteTodo(id: string) {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
   }
