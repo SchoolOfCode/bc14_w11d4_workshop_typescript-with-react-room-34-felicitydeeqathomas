@@ -13,11 +13,11 @@ You may find these resources helpful as you work through this workshop:
 - https://profy.dev/article/react-typescript
 - https://www.carlrippon.com/React-event-handlers-with-typescript/
 
-## Task 1
+## Task 1 ✅
 
 Convert the `App.js` and `Header.js` components to TypeScript components (`App.tsx` and `Header.tsx` respectively).
 
-## Task 2
+## Task 2 ✅
 
 Convert the `AddTodo.js` component to a TypeScript component.
 
