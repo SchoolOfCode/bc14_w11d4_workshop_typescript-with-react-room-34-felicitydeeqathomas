@@ -1,4 +1,13 @@
-export function TodoTitle(props) {
+type AddTodoTitleProps = {
+  title: () => void;
+  isComplete: () => void;
+  isEditing: () => void;
+  editedTodoTitle: () => void;
+  setEditedTodoTitle: () => void;
+}
+
+
+export function TodoTitle(props: AddTodoTitleProps) {
   const { isEditing, isComplete, title, editedTodoTitle, setEditedTodoTitle } =
     props;
 
