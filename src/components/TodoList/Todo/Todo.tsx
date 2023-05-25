@@ -19,8 +19,8 @@ export function Todo(props: TodoProps) {
   const { todo, updateTodo, deleteTodo } = props;
   const { title, isComplete } = todo;
 
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedTodoTitle, setEditedTodoTitle] = useState(title);
+  const [isEditing, setIsEditing] = useState<boolean>(false);
+  const [editedTodoTitle, setEditedTodoTitle] = useState<string>(title);
 
   function onClickToggle() {
     const updatedTodo = { ...todo, isComplete: !todo.isComplete };

@@ -5,14 +5,14 @@ import { AddTodo } from "./AddTodo";
 import { TodoObject } from "./Todo/Todo";
 
 
-const initialTodos = [
+const initialTodos: TodoObject[] = [
   { id: nanoid(), title: "Make some 🔥 noodles", isComplete: false },
   { id: nanoid(), title: "Take care of the cats 🐈🐈🐱", isComplete: true },
   { id: nanoid(), title: "Fix the TV 📺", isComplete: false },
 ];
 
 export function TodoList() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<TodoObject[]>(initialTodos);
 
   function addTodo(newTodoTitle: string) {
     const newTodo = {
